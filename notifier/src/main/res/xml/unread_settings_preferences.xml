@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.rxmapple.notifier.DefaultPhonePreference
+        android:title="@string/pref_missed_call_count_title"
+        android:key="pref_missed_call_count"
+        android:summary="@string/pref_missed_call_count_summary"
+        android:defaultValue="" />
+
+    <com.rxmapple.notifier.DefaultSmsPreference
+        android:title="@string/pref_unread_sms_count_title"
+        android:key="pref_unread_sms_count"
+        android:summary="@string/pref_unread_sms_count_summary"
+        android:defaultValue="" />
+
+    <CheckBoxPreference
+        android:title="@string/pref_unread_gmail_count_title"
+        android:key="pref_unread_gmail_count"
+        android:summary="@string/pref_unread_gmail_count_summary"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:title="@string/pref_custom_notifiter_title"
+        android:key="pref_unread_notification_count">
+        <com.rxmapple.notifier.SelectAppPreference
+            android:title="@string/pref_unread_qq_count_title"
+            android:key="pref_unread_qq_count"
+            android:dependency="pref_unread_notification_count"
+            android:summary="@string/app_list_preference_none"
+            android:defaultValue="" />
+        <com.rxmapple.notifier.SelectAppPreference
+            android:title="@string/pref_unread_wechat_count_title"
+            android:key="pref_unread_wechat_count"
+            android:dependency="pref_unread_notification_count"
+            android:summary="@string/app_list_preference_none"
+            android:defaultValue="" />
+        <com.rxmapple.notifier.SelectAppPreference
+            android:title="@string/pref_unread_custom1_count_title"
+            android:key="pref_unread_custom1_count"
+            android:dependency="pref_unread_notification_count"
+            android:summary="@string/app_list_preference_none"
+            android:defaultValue="" />
+        <com.rxmapple.notifier.SelectAppPreference
+            android:title="@string/pref_unread_custom2_count_title"
+            android:key="pref_unread_custom2_count"
+            android:dependency="pref_unread_notification_count"
+            android:summary="@string/app_list_preference_none"
+            android:defaultValue="" />
+        <com.rxmapple.notifier.SelectAppPreference
+            android:title="@string/pref_unread_custom3_count_title"
+            android:key="pref_unread_custom3_count"
+            android:dependency="pref_unread_notification_count"
+            android:summary="@string/app_list_preference_none"
+            android:defaultValue="" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

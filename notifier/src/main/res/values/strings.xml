@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Unread Notifier</string>
+    <string name="accessiblity_description">Unread Notifier require Accessibility service to read notifications to caculate unread counts</string>
+    <string name="notification_counter">Unread Counts</string>
+    <string name="pref_missed_call_count_title">Missed call counts</string>
+    <string name="pref_missed_call_count_summary">Select a Phone app, display the missed calls number on it</string>
+    <string name="pref_unread_sms_count_title">Unread SMS counts</string>
+    <string name="pref_unread_sms_count_summary">Select a SMS app, display the unread messages number on it</string>
+    <string name="pref_unread_gmail_count_title">Unread Gmail counts</string>
+    <string name="pref_unread_gmail_count_summary">Requires Gmail 4.0.5+</string>
+
+    <string name="pref_unread_wechat_count_title">Wechat notifier</string>
+    <string name="pref_unread_qq_count_title">QQ notifier</string>
+    <string name="pref_unread_custom1_count_title">Custom notifier 1</string>
+    <string name="pref_unread_custom2_count_title">Custom notifier 2</string>
+    <string name="pref_unread_custom3_count_title">Custom notifier 3</string>
+    <string name="pref_custom_notifiter_title">Notifier(For 4.3+ device)</string>
+    <string name="app_list_preference_none">none</string>
+    <string name="selected">(Selected)</string>
+</resources>
