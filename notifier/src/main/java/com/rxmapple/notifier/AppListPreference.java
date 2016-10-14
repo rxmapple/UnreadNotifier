@@ -164,7 +164,7 @@ public class AppListPreference extends ListPreference {
             }
             dest.writeInt(N);
             dest.writeStringArray(stringArray);
-            dest.writeString(value.toString());
+            dest.writeString(value != null ? value.toString() : "");
             dest.writeInt(showItemNone ? 1 : 0);
             dest.writeParcelable(superState, flags);
         }

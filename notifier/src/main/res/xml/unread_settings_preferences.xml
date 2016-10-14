@@ -1,56 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.rxmapple.notifier.DefaultPhonePreference
-        android:title="@string/pref_missed_call_count_title"
-        android:key="pref_missed_call_count"
-        android:summary="@string/pref_missed_call_count_summary"
-        android:defaultValue="" />
+    <PreferenceCategory
+        android:key="pref_unread_event_count"
+        android:title="@string/pref_unread_provider_title">
 
-    <com.rxmapple.notifier.DefaultSmsPreference
-        android:title="@string/pref_unread_sms_count_title"
-        android:key="pref_unread_sms_count"
-        android:summary="@string/pref_unread_sms_count_summary"
-        android:defaultValue="" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_provider_services"
+            android:summaryOff="@string/pref_services_not_running"
+            android:summaryOn="@string/pref_services_running"
+            android:title="@string/pref_provider_services"/>
 
-    <CheckBoxPreference
-        android:title="@string/pref_unread_gmail_count_title"
-        android:key="pref_unread_gmail_count"
-        android:summary="@string/pref_unread_gmail_count_summary"
-        android:defaultValue="false" />
+        <com.rxmapple.notifier.DefaultPhonePreference
+            android:defaultValue=""
+            android:dependency="pref_provider_services"
+            android:key="pref_missed_call_count"
+            android:summary="@string/pref_missed_call_count_summary"
+            android:title="@string/pref_missed_call_count_title"/>
+
+        <com.rxmapple.notifier.DefaultSmsPreference
+            android:defaultValue=""
+            android:dependency="pref_provider_services"
+            android:key="pref_unread_sms_count"
+            android:summary="@string/pref_unread_sms_count_summary"
+            android:title="@string/pref_unread_sms_count_title"/>
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="pref_provider_services"
+            android:key="pref_unread_gmail_count"
+            android:summary="@string/pref_unread_gmail_count_summary"
+            android:title="@string/pref_unread_gmail_count_title"/>
+    </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/pref_custom_notifiter_title"
-        android:key="pref_unread_notification_count">
+        android:key="pref_unread_notification_count"
+        android:title="@string/pref_custom_notifiter_title">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_notifier_services"
+            android:summaryOff="@string/pref_services_not_running"
+            android:summaryOn="@string/pref_services_running"
+            android:title="@string/pref_notifier_services"/>
+
         <com.rxmapple.notifier.SelectAppPreference
-            android:title="@string/pref_unread_qq_count_title"
+            android:defaultValue=""
+            android:dependency="pref_notifier_services"
             android:key="pref_unread_qq_count"
-            android:dependency="pref_unread_notification_count"
             android:summary="@string/app_list_preference_none"
-            android:defaultValue="" />
+            android:title="@string/pref_unread_qq_count_title"/>
+
         <com.rxmapple.notifier.SelectAppPreference
-            android:title="@string/pref_unread_wechat_count_title"
+            android:defaultValue=""
+            android:dependency="pref_notifier_services"
             android:key="pref_unread_wechat_count"
-            android:dependency="pref_unread_notification_count"
             android:summary="@string/app_list_preference_none"
-            android:defaultValue="" />
+            android:title="@string/pref_unread_wechat_count_title"/>
+
         <com.rxmapple.notifier.SelectAppPreference
-            android:title="@string/pref_unread_custom1_count_title"
+            android:defaultValue=""
+            android:dependency="pref_notifier_services"
             android:key="pref_unread_custom1_count"
-            android:dependency="pref_unread_notification_count"
             android:summary="@string/app_list_preference_none"
-            android:defaultValue="" />
+            android:title="@string/pref_unread_custom1_count_title"/>
+
         <com.rxmapple.notifier.SelectAppPreference
-            android:title="@string/pref_unread_custom2_count_title"
+            android:defaultValue=""
+            android:dependency="pref_notifier_services"
             android:key="pref_unread_custom2_count"
-            android:dependency="pref_unread_notification_count"
             android:summary="@string/app_list_preference_none"
-            android:defaultValue="" />
+            android:title="@string/pref_unread_custom2_count_title"/>
+
         <com.rxmapple.notifier.SelectAppPreference
-            android:title="@string/pref_unread_custom3_count_title"
+            android:defaultValue=""
+            android:dependency="pref_notifier_services"
             android:key="pref_unread_custom3_count"
-            android:dependency="pref_unread_notification_count"
             android:summary="@string/app_list_preference_none"
-            android:defaultValue="" />
+            android:title="@string/pref_unread_custom3_count_title"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

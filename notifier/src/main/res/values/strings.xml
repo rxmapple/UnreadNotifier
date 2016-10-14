@@ -17,4 +17,9 @@
     <string name="pref_custom_notifiter_title">Notifier(For 4.3+ device)</string>
     <string name="app_list_preference_none">none</string>
     <string name="selected">(Selected)</string>
+    <string name="pref_unread_provider_title">Provider</string>
+    <string name="pref_provider_services">Provider Services</string>
+    <string name="pref_services_running">Running</string>
+    <string name="pref_services_not_running">Stoped</string>
+    <string name="pref_notifier_services">Notifier Services</string>
 </resources>
